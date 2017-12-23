@@ -53,6 +53,7 @@ betaA := affine(12500,0) * delay(0.016)
 \caption{Courbe de service du nœud A}
 \end{figure} 
 
-Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie.  
+Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie. Pour résumé, le modèle du nœud $A$ reçoit des données dans une courbe d'arrivé de type seau percé pour les traiter avec une courbe de service du type latence-tau. Selon nos estimations, le nœud va donc lisser le débit des flux $v1$ et $v2$.
 
 \section{Courbe d'arrivé du nœud A}
+Nous nous intéressons maintenant au cumul des flux dans l'entrée du nœud $A$.
