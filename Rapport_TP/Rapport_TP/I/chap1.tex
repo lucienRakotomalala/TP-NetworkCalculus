@@ -10,7 +10,7 @@ Pour déterminer la courbe d'arrivée, nous allons tout d'abord analyser les don
 
 \begin{figure}[!ht]\label{fig:CA_1_2}
 \centering
-\includegraphics[width = .5\textwidth]{./I/images/alpha_1_2.png}
+\includegraphics[width = .6\textwidth]{./I/images/alpha_1_2.png}
 \caption{Courbe d'arrivée $\alpha$ du flux $v1$ (rouge) et du flux $v_2$ (bleu)}
 \end{figure} 
 
@@ -56,4 +56,18 @@ betaA := affine(12500,0) * delay(0.016)
 Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie. Pour résumé, le modèle du nœud $A$ reçoit des données dans une courbe d'arrivé de type seau percé pour les traiter avec une courbe de service du type latence-tau. Selon nos estimations, le nœud va donc lisser le débit des flux $v1$ et $v2$.
 
 \section{Courbe d'arrivé du nœud A}
-Nous nous intéressons maintenant au cumul des flux dans l'entrée du nœud $A$.
+Nous nous intéressons maintenant au cumul des flux dans l'entrée du nœud $A$. Pour cela, nous allons utiliser le résultat expliqué en pendant les travaux dirigés qui expriment : 
+\begin{equation}
+\alpha^A = \alpha_1^A + \alpha_2^A
+\end{equation}
+soit la somme des pentes $r_i$ et des $L_i^{max}$ de $\alpha_1^A$ et $\alpha_2^A$. Nous obtenons par le calcul une fonction affine décrit dans l'équation  que nous comparons avec les courbes $\alpha_1^A$ et $\alpha_2^A$ dans la figure \ref{fig:arriveA}.
+\begin{align}\label{eqn:arriveA}
+&\alpha^A = \gamma_{r,b} \text{ avec $r$ la pente et $b$ les tailles maximales de la trame $L_i$}\\
+&r = r_1 + r_2 = a_1 + a_2\text{ et } \\
+&b = b_1 + b_2 = b_1 + b_2\\
+\end{align}
+\begin{figure}[!ht]\label{fig:arriveA}
+\centering
+\includegraphics[width = .6\textwidth]{./I/images/arrive_general.png}
+\caption{Courbe de d'arrivé du nœud A}
+\end{figure} 
