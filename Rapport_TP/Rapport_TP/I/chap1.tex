@@ -38,3 +38,21 @@ De même pour le flux $v2$,nous obtenons comme application numérique : \begin{a
 \end{align*}
 La courbe obtenu est de la forme sceau percé, nous avons une quantité maximale émise instantanément par le bloc $A$ et un débit moyen maximal.
 \section{Courbe de service $\beta$}
+Nous allons maintenant établir la courbe de service disponible par le nœud A. Cette fonction du port desortie de $A$ est établit en fonction de la latence technologique $\mu$ déterminé et du débit du port de sortie. Notre étude est calibré selon lesuniés défini en\ref{fixUnity}, il est donc important de respecter ces conditions dès maintenant pour éviter tout problème fuur d'unité. Nous relevons :\begin{align}\label{eqn:portSortie}
+debit &= 100Mb/s = 12500\ Octets/ms\\
+\mu &= 16\mu s = 0.016 ms
+\end{align}
+
+Pour établir cette fonction sur \emph{Network Calculus}, nous avons choisi d'établir une fonction affine qui admet comme pente le débit du port de sortie mais qui subit un décalage, i.e un \emph{delay} dans l'interpréteur, pour modéliser la latence technologique. La courbe en \ref{fig:serviceA} est obtenu avec la ligne de commande :
+\begin{verbatim}
+betaA := affine(12500,0) * delay(0.016) 
+\end{verbatim}
+\begin{figure}[!ht]\label{fig:serviceA}
+\centering
+\includegraphics[width = .5\textwidth]{./I/images/beta_A.png}
+\caption{Courbe de service du nœud A}
+\end{figure} 
+
+Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie.  
+
+\section{Courbe d'arrivé du nœud A}
