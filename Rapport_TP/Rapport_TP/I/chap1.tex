@@ -9,17 +9,9 @@ Nous avons décidé de d'utiliser et de fixer les unités sur lesquelles nous ba
 Pour déterminer la courbe d'arrivée, nous allons tout d'abord analyser les données que nous pouvons receuillir sur le bloc A. Nous relevons deux flux d'entrée $v1$ et $v2$. Pour connaitre la courbe d'arrivée $\alpha^A$, nous devons tracer les deux courbes d'entrée des deux flux entrants, courbes que nous affichons en figure (\ref{fig:CA_1_2})
 
 \begin{figure}[!ht]\label{fig:CA_1_2}
-\begin{minipage}{.5\textwidth}
 \centering
-%\includegraphics[width]{./I/images/courbe_arrivee_1.png}
-\caption{Courbe d'arrivée $\alpha$ du flux $v1$}
-\end{minipage}
-
-\begin{minipage}{.5\textwidth}
-\centering
-%\includegraphics[width]{./I/images/courbe_arrivee_2.png}
-\caption{Courbe d'arrivée $\alpha$ du flux $v2$}
-\end{minipage}
+\includegraphics[width = .5\textwidth]{./I/images/alpha_1_2.png}
+\caption{Courbe d'arrivée $\alpha$ du flux $v1$ (rouge) et du flux $v_2$ (bleu)}
 \end{figure} 
 
 Ces courbes ont été obtenu à l'aide des informations sur les $BAG$ et les $s_{max}$ de $v1$ et $v2$. Pour obtenir des données correspondantes aux unités choisis en \ref{fixUnity}, nous devons utiliser la relation suivantes qui lie la taille maximale d'une trame $L_j^{max}$ et la charge utile maximale $s_j^{max}$ d'un \emph{Virtual Link}(VL) $j$ :
@@ -33,6 +25,16 @@ Nous observons donc avec cette équation que la taille maximale d'une trame est 
 
 Dans notre cas, nous obtenons l'application numérique suivante : 
 \begin{align*}
-a_1 = \frac{\frac{L_1^{max}}{BAG_1}}{BAG_1}
+&a_1 = \frac{L_1^{max}}{BAG_1} = \frac{ max(s_j^{max},17)+47}{BAG_1} = \frac{167}{2} = 83.5\\
+&b_1 =  max(s_j^{max},17)+47 = 167
 \end{align*}
+Avec l'interpréteur, nous pouvons obtenir la courbe affine avec la commande : \begin{verbatim}
+alpha1A1 := affine(83.5, 167) //echelle octets/ms
+\end{verbatim}
 
+De même pour le flux $v2$,nous obtenons comme application numérique : \begin{align*}
+&a_2 = 26.46\\
+&b_2 = 847
+\end{align*}
+La courbe obtenu est de la forme sceau percé, nous avons une quantité maximale émise instantanément par le bloc $A$ et un débit moyen maximal.
+\section{Courbe de service $\beta$}
