@@ -71,3 +71,16 @@ soit la somme des pentes $r_i$ et des $L_i^{max}$ de $\alpha_1^A$ et $\alpha_2^A
 \includegraphics[width = .6\textwidth]{./I/images/arrive_general.png}
 \caption{Courbe de d'arrivé du nœud A}
 \end{figure} 
+
+\section{Délai et backlog pire cas}
+Le délai pire cas et le backlog permettent de se concentrer sur l'étude des temps de traversé du système. Nous en aurons besoin dans le suite de ce rapport, c'est pourquoi nous commençons l'étude dans cette partie.
+
+Pour déterminer ce temps et cette quantité de donnée, nous utilisons un résultat donné en cours qui explique les relations suivantes : le délai pire cas est la plus grande différence horizontale entre la courbe d'arrivé et la courbe de service d'un nœud noté \emph{hDev}. Respectivement, le backlog pire cas est la plus grande différence verticale entre les deux courbes noté \emph{vDev}. 
+
+Nous obtenons ainsi un délai et une quantité qui représentent les pire cas possibles de traitement du nœud. Avec l'interpréteur de commande, nous pouvons calculer ces deux informations et nous obtenons : \begin{align}\label{eqn:delai-backlog}
+&hDev(\alpha^A,\beta^A) = 97.12 ms\\
+&vDev(\alpha^A,\beta^A) = 1015\ octets
+\end{align}
+Nous ne connaissons pas les limites du système qui utilise ce réseau, nous ne pouvons donc pas établir de conclusions sur ces résultat. Nous pourrons les comparer une fois que les délai et backlog pire cas des autres nœud auront été calculé.
+
+\section{Courbes d'arrivé du port 1 et 2 de $B$} 
