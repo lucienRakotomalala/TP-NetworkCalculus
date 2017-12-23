@@ -1,3 +1,38 @@
-\chapter{chap1}
+\chapter{Étude du nœud A}
+Dans cette partie, nous étudierons un premier bloc du réseau. Nous calculerons les courbes d'arrivé du noeud et la courbe de service pour comprendre sa courbe de sortie et ainsi mesuré sa porter sur le reste du réseau.
 
+Les tracés de l'ensemble des courbes a été obtenu par l'interpréteur en ligne \emph{http://realtimeatwork.com/minplus-playground}, il s'agit d'un interpréteur qui permet entre autre le tracé de courbes affines mais aussi le calcul en algèbre (min,+). 
+
+Nous avons décidé de d'utiliser et de fixer les unités sur lesquelles nous baserons nos courbes. Nous avons choisi de travailler en \textbf{octets} (axe des ordonnées) et le temps (axe des abscisse) sera en \textbf{millisecondes}. Nous verrons en synthèse à ce rapport si nos choix pour ces unités étaient judicieux. \label{fixUnity}
+
+\section{Courbes d'arrivée $\alpha$} 
+Pour déterminer la courbe d'arrivée, nous allons tout d'abord analyser les données que nous pouvons receuillir sur le bloc A. Nous relevons deux flux d'entrée $v1$ et $v2$. Pour connaitre la courbe d'arrivée $\alpha^A$, nous devons tracer les deux courbes d'entrée des deux flux entrants, courbes que nous affichons en figure (\ref{fig:CA_1_2})
+
+\begin{figure}[!ht]\label{fig:CA_1_2}
+\begin{minipage}{.5\textwidth}
+\centering
+%\includegraphics[width]{./I/images/courbe_arrivee_1.png}
+\caption{Courbe d'arrivée $\alpha$ du flux $v1$}
+\end{minipage}
+
+\begin{minipage}{.5\textwidth}
+\centering
+%\includegraphics[width]{./I/images/courbe_arrivee_2.png}
+\caption{Courbe d'arrivée $\alpha$ du flux $v2$}
+\end{minipage}
+\end{figure} 
+
+Ces courbes ont été obtenu à l'aide des informations sur les $BAG$ et les $s_{max}$ de $v1$ et $v2$. Pour obtenir des données correspondantes aux unités choisis en \ref{fixUnity}, nous devons utiliser la relation suivantes qui lie la taille maximale d'une trame $L_j^{max}$ et la charge utile maximale $s_j^{max}$ d'un \emph{Virtual Link}(VL) $j$ :
+\begin{align}\label{eqn:maxTrame}
+L_j^{max} = max(s_j^{max},17)+47
+\end{align}
+Nous observons donc avec cette équation que la taille maximale d'une trame est strictement supérieure à $50$. A l'aide de cette équation, nous sommes capable d'établir la pente $a_j$ de la courbe des données maximales ainsi que son offset $b_j$ de décalage qui peuvent arrivées dans $A$ avec \begin{align}\label{eqn:penteOffset}
+ &a_j = \frac{L_j^{max}}{BAG_j}\\
+ &b_j = L_j^{max}
+\end{align}
+
+Dans notre cas, nous obtenons l'application numérique suivante : 
+\begin{align*}
+a_1 = \frac{\frac{L_1^{max}}{BAG_1}}{BAG_1}
+\end{align*}
 
