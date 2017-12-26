@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  26 DEC 2017 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  26 DEC 2017 17:43
 entering extended mode
 **./main.tex
 (main.tex
@@ -945,28 +945,33 @@ File: ./page_de_garde/logo_ups.png Graphic file (type png)
 <use ./page_de_garde/logo_ups.png>
 Package pdftex.def Info: ./page_de_garde/logo_ups.png  used on input line 11.
 (pdftex.def)             Requested size: 290.22107pt x 93.95636pt.
-LaTeX Font Info:    Try loading font information for U+rsfs on input line 31.
+LaTeX Font Info:    Try loading font information for U+rsfs on input line 33.
 
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-<./page_de_garde/logo_fsi.png, id=104, 383.4325pt x 132.495pt>
+<./page_de_garde/schema.jpg, id=104, 308.83081pt x 81.0232pt>
+File: ./page_de_garde/schema.jpg Graphic file (type jpg)
+<use ./page_de_garde/schema.jpg>
+Package pdftex.def Info: ./page_de_garde/schema.jpg  used on input line 45.
+(pdftex.def)             Requested size: 386.95897pt x 101.52599pt.
+<./page_de_garde/logo_fsi.png, id=105, 383.4325pt x 132.495pt>
 File: ./page_de_garde/logo_fsi.png Graphic file (type png)
 <use ./page_de_garde/logo_fsi.png>
-Package pdftex.def Info: ./page_de_garde/logo_fsi.png  used on input line 47.
+Package pdftex.def Info: ./page_de_garde/logo_fsi.png  used on input line 50.
 (pdftex.def)             Requested size: 164.67969pt x 56.9055pt.
-<./page_de_garde/logo_eea.jpg, id=105, 105.39375pt x 124.465pt>
+<./page_de_garde/logo_eea.jpg, id=106, 105.39375pt x 124.465pt>
 File: ./page_de_garde/logo_eea.jpg Graphic file (type jpg)
 <use ./page_de_garde/logo_eea.jpg>
-Package pdftex.def Info: ./page_de_garde/logo_eea.jpg  used on input line 49.
+Package pdftex.def Info: ./page_de_garde/logo_eea.jpg  used on input line 52.
 (pdftex.def)             Requested size: 48.18741pt x 56.9055pt.
 
 [1
 
 {C:/Users/David/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./page_de_g
-arde/logo_ups.png> <./page_de_garde/logo_fsi.png> <./page_de_garde/logo_eea.jpg
->])pdfTeX warning (ext4): destination with the same identifier (name{page.1}) h
-as been already used, duplicate ignored
+arde/logo_ups.png> <./page_de_garde/schema.jpg> <./page_de_garde/logo_fsi.png> 
+<./page_de_garde/logo_eea.jpg>])pdfTeX warning (ext4): destination with the sam
+e identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 \tableofcontents
@@ -1014,7 +1019,7 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `fig:CA_1_2' on page 2 undefined on input line 9.
 
-<./I/images/alpha_1_2.png, id=162, 601.0455pt x 452.28975pt>
+<./I/images/alpha_1_2.png, id=163, 601.0455pt x 452.28975pt>
 File: ./I/images/alpha_1_2.png Graphic file (type png)
 <use ./I/images/alpha_1_2.png>
 Package pdftex.def Info: ./I/images/alpha_1_2.png  used on input line 13.
@@ -1046,7 +1051,7 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `fig:serviceA' on page 3 undefined on input line 46.
 
-<./I/images/beta_A.png, id=178, 599.23875pt x 455.301pt>
+<./I/images/beta_A.png, id=179, 599.23875pt x 455.301pt>
 File: ./I/images/beta_A.png Graphic file (type png)
 <use ./I/images/beta_A.png>
 Package pdftex.def Info: ./I/images/beta_A.png  used on input line 52.
@@ -1059,7 +1064,7 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `fig:arriveA' on page 4 undefined on input line 63.
 
-<./I/images/arrive_general.png, id=190, 601.0455pt x 457.71pt>
+<./I/images/arrive_general.png, id=191, 601.0455pt x 457.71pt>
 File: ./I/images/arrive_general.png Graphic file (type png)
 <use ./I/images/arrive_general.png>
 Package pdftex.def Info: ./I/images/arrive_general.png  used on input line 71.
@@ -1122,10 +1127,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 23447 strings out of 495229
- 417520 string characters out of 3181267
- 521456 words of memory out of 3000000
- 26224 multiletter control sequences out of 15000+200000
+ 23452 strings out of 495229
+ 417653 string characters out of 3181267
+ 521511 words of memory out of 3000000
+ 26228 multiletter control sequences out of 15000+200000
  20905 words of font info for 45 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  62i,13n,96p,507b,753s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1152,9 +1157,9 @@ ers/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 /cmmi7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/a
 msfonts/cm/cmr7.pfb>
-Output written on main.pdf (13 pages, 584723 bytes).
+Output written on main.pdf (13 pages, 637790 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
+ 691 PDF objects out of 1000 (max. 8388607)
  52 named destinations out of 1000 (max. 500000)
- 235 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 240 words of extra memory for PDF output out of 10000 (max. 10000000)
 
