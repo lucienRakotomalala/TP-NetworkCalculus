@@ -1,8 +1,8 @@
 // Partie 1
 
 //Envoyer par mail le rapport M.Lauer et Mme. Le Corronc 22/12
-alpha1A1 := affine(60, 120) //echelle octets/ms
-alpha2A1 := affine(25, 800) //echelle octets/ms
+alpha1A1 := affine(83.5, 167) //echelle octets/ms
+alpha2A1 := affine(26.46, 847) //echelle octets/ms
 betaA := affine(12500,0) * delay(0.016) // elle est de type latence tau
 alphaA1:= alpha1A1 + alpha2A1 //  pour la quetion 3 
 
@@ -10,9 +10,10 @@ alphaA1:= alpha1A1 + alpha2A1 //  pour la quetion 3
 plot(alpha1A1,alpha2A1,betaA,xlim = [0,0.05],ylim = [0,1000])
 plot(alphaA1,xlim = [0,0.05],ylim = [0,1000])
   
-HdevA1 := hDev(alpha1A1,betaA)
+HdevA1 := hDev(alpha1A1,betaA);
+HdevA1
 VdevA1 := vDev(alpha1A1,betaA)
-  
+VdevA1
 HdevA2 := hDev(alpha2A1,betaA)
 VdevA2 := vDev(alpha2A1,betaA)
 
@@ -65,3 +66,8 @@ Hdev5 := hDev(alpha5B1,betaA)
 Vdev5 := vDev(alpha5B1,betaA)
   
 alpha2B2 = alpha
+
+
+
+
+
