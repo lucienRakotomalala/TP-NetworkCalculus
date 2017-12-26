@@ -8,10 +8,10 @@ Nous avons décidé de d'utiliser et de fixer les unités sur lesquelles nous ba
 \section{Courbes d'arrivée $\alpha$} 
 Pour déterminer la courbe d'arrivée, nous allons tout d'abord analyser les données que nous pouvons receuillir sur le bloc A. Nous relevons deux flux d'entrée $v1$ et $v2$. Pour connaitre la courbe d'arrivée $\alpha^A$, nous devons tracer les deux courbes d'entrée des deux flux entrants, courbes que nous affichons en figure (\ref{fig:CA_1_2})
 
-\begin{figure}[!ht]\label{fig:CA_1_2}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width = .6\textwidth]{./I/images/alpha_1_2.png}
-\caption{Courbe d'arrivée $\alpha$ du flux $v1$ (rouge) et du flux $v_2$ (bleu)}
+\caption{\label{fig:CA_1_2}Courbe d'arrivée $\alpha$ du flux $v1$ (rouge) et du flux $v_2$ (bleu)}
 \end{figure} 
 
 Ces courbes ont été obtenu à l'aide des informations sur les $BAG$ et les $s_{max}$ de $v1$ et $v2$. Pour obtenir des données correspondantes aux unités choisis en \ref{fixUnity}, nous devons utiliser la relation suivantes qui lie la taille maximale d'une trame $L_j^{max}$ et la charge utile maximale $s_j^{max}$ d'un \emph{Virtual Link}(VL) $j$ :
@@ -47,10 +47,10 @@ Pour établir cette fonction sur \emph{Network Calculus}, nous avons choisi d'é
 \begin{verbatim}
 betaA := affine(12500,0) * delay(0.016) 
 \end{verbatim}
-\begin{figure}[!ht]\label{fig:serviceA}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width = .5\textwidth]{./I/images/beta_A.png}
-\caption{Courbe de service du nœud A}
+\caption{\label{fig:serviceA}Courbe de service du nœud A}
 \end{figure} 
 
 Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie. Pour résumé, le modèle du nœud $A$ reçoit des données dans une courbe d'arrivé de type seau percé pour les traiter avec une courbe de service du type latence-tau. Selon nos estimations, le nœud va donc lisser le débit des flux $v1$ et $v2$.
@@ -66,10 +66,10 @@ soit la somme des pentes $r_i$ et des $L_i^{max}$ de $\alpha_1^A$ et $\alpha_2^A
 &r = r_1 + r_2 = a_1 + a_2\text{ et } \\
 &b = b_1 + b_2 = b_1 + b_2\\
 \end{align}
-\begin{figure}[!ht]\label{fig:arriveA}
+\begin{figure}[!ht]
 \centering
 \includegraphics[width = .6\textwidth]{./I/images/arrive_general.png}
-\caption{Courbe de d'arrivé du nœud A}
+\caption{\label{fig:arriveA}Courbe de d'arrivé du nœud A}
 \end{figure} 
 
 \section{Délai et backlog pire cas}
@@ -78,9 +78,26 @@ Le délai pire cas et le backlog permettent de se concentrer sur l'étude des te
 Pour déterminer ce temps et cette quantité de donnée, nous utilisons un résultat donné en cours qui explique les relations suivantes : le délai pire cas est la plus grande différence horizontale entre la courbe d'arrivé et la courbe de service d'un nœud noté \emph{hDev}. Respectivement, le backlog pire cas est la plus grande différence verticale entre les deux courbes noté \emph{vDev}. 
 
 Nous obtenons ainsi un délai et une quantité qui représentent les pire cas possibles de traitement du nœud. Avec l'interpréteur de commande, nous pouvons calculer ces deux informations et nous obtenons : \begin{align}\label{eqn:delai-backlog}
-&hDev(\alpha^A,\beta^A) = 97.12 ms\\
-&vDev(\alpha^A,\beta^A) = 1015\ octets
+&hDev(\alpha^{A1},\beta^A) = 2.36 ms\\
+&vDev(\alpha^{A1},\beta^A) = 168.3\ octets
 \end{align}
 Nous ne connaissons pas les limites du système qui utilise ce réseau, nous ne pouvons donc pas établir de conclusions sur ces résultat. Nous pourrons les comparer une fois que les délai et backlog pire cas des autres nœud auront été calculé.
 
 \section{Courbes d'arrivé du port 1 et 2 de $B$} 
+Avec la mise en tandem des flux $v1$ et $v2$, nous pouvons établir la courbe d'arrivé du bloc $B$ avec les courbes de sorties du bloc $A$. Nous disposons de l'équation qui permet de lié la courbe d'arrivé avec la courbe de sortie :
+ \begin{equation}
+\alpha_i^{B_i} = \alpha'^{A_i} = \alpha^{A_i} \varoslash \tau_i
+\end{equation} avec $tau$ le délai pire cas du flux $i$ et $\alpha'^{A_i}$ la courbe de sortie du bloc $A$ correspondant au flux $i$. Nous avons déjà calculé le délai pire cas du flux $1$ mais pas le flux $2$. Avec le même raisonnement utilisé en \ref{eqn:delai-backlog}, nous avons :
+\begin{equation}
+\tau_2 = hDev(\alpha^{A2}, \beta^{A}) = 83.7ms
+\end{equation}
+Maintenant que nous disposons de toutes les ressources, nous pouvons calculer les courbes d'arrivé des flux $1$ et $2$ dans $B$ avec l'interpréteur : \begin{verbatim}
+alpha1B1 := alpha1A1 / delay(HdevA1)
+alpha2B2 := alpha2A2 / delay(HdevA2)
+\end{verbatim}
+Ces réslutats nous permetent d'afficher la figure suivante :
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .6\textwidth]{./I/images/sortiesA.png}
+\caption{\label{fig:sortieA}Courbes de sortie du nœud A}
+\end{figure} 
