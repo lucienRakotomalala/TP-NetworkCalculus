@@ -2,11 +2,39 @@
 Dans ce chapitre, nous allons étendre l'étude précédente à l'ensemble du réseau.
 Nous allons commencer par une étude générale du réseau puis, nous étudierons les pire temps de traversé (WCTT) et les pires différences des volumes de données du réseau (backlog). Pour fini, nous verrons comment améliorer le WCTT et le backlog du réseaux.
 \section{Analyse générale du réseau}
-Dans un premier temps, nous allons calculer les courbes d'arrivées des flux $v_3$, $v_4$ et $v_5$ dans B et C puis les courbes de service des ports de sorties de B et C.
+Dans un premier temps, nous allons calculer les courbes d'arrivées de B et C, puis les courbes de service des ports de sorties de B et C.
 \subsection{Courbes d’arrivées de B et C}
+Nous avons calculé les courbes d'arrivées des flux $v_3$, $v_4$ et $v_5$, c'est-à-dire le volume de données qui arrive par intervalle de temps dans les entrées du bloc C et par la troisième entrée du bloc B. Respectivement : 
+\begin{description}
+\item[$\alpha_3^{C1}$ ] Qui est la même que $\alpha_1^{A1}$, dans le chapitre précédent, figure \ref{fig:CA_1_2}, page \pageref{fig:CA_1_2}. En effet $v_1$ et $v_3$ ont les mêmes caractéristiques (BAG et $s_{max}$). Elle est de type sceau percé.
 
+\item[$\alpha_4^{C1}$ ] Qui est la même que $\alpha_2^{A1}$, dans le chapitre précédent, figure \ref{fig:CA_1_2}, page \pageref{fig:CA_1_2}. En effet $v_2$ et $v_4$ ont les mêmes caractéristiques (BAG et $s_{max}$). Elle est de type sceau percé.
+
+\item[$\alpha_5^{B1}$ ] Qui doit réponde aux  caractéristiques suivantes : BAG$=128 ms$ et $s_{max}=800$ octets. Elle est représentée figure \ref{fig:CA_5}. Elle est de type sceau percé.
+\end{description}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .6\textwidth]{./II/images/alpha_5.png}
+\caption{\label{fig:CA_5}Courbe d'arrivée $\alpha$ du flux $v_5$ (bleu)}
+\end{figure} 
 \subsection{Courbes de service de B et C}
+Nous allons voir ici, par la même méthode que celle utilisé dans le chapitre précédent, les courbes de services des deux sorties de B et la sortie de C. Voici, en commençant par la courbe de service du n\oe ud C :
+\begin{description}
+\item[$\betha^{C1}$ ] Qui est la même que $\betha^{A}$, dans le chapitre précédent, figure \ref{fig:serviceA}, page \pageref{fig:serviceA}. En effet les n\oe uds A et C ont les mêmes caractéristiques et les entrées ont les mêmes courbes d'arrivées (BAG et $s_{max}$) la courbe de service est donc identique.
 
+\item[$\beta^{B1}$ ] Pour calculer cette courbe de service, nous avons calculer .
+
+\item[$\alpha_4^{C1}$ ] Qui est la même que $\alpha_2^{A1}$, dans le chapitre précédent, figure \ref{fig:CA_1_2}, page \pageref{fig:CA_1_2}. En effet $v_2$ et $v_4$ ont les mêmes caractéristiques (BAG et $s_{max}$).
+
+
+\end{description}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width = .6\textwidth]{./II/images/alpha_5.png}
+\caption{\label{fig:CA_5}Courbe d'arrivée $\alpha$ du flux $v_5$ (bleu)}
+\end{figure} 
 \subsection{Étude de l'ensemble du réseau}
 
 
