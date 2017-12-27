@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  27 DEC 2017 14:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  27 DEC 2017 14:32
 entering extended mode
 **./main.tex
 (main.tex
@@ -814,11 +814,7 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 \c@cpt1=\count167
- (main.aux
-
-LaTeX Warning: Label `fig:CA_5' multiply defined.
-
-)
+ (main.aux)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
@@ -844,7 +840,8 @@ Package french.ldf Info: Setting StandardEnumerateEnv=true for
 (french.ldf)             compatibility with enumitem package,
 (french.ldf)             reported on input line 75.
 LaTeX Info: Redefining \up on input line 75.
- (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
+
+(C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
@@ -978,18 +975,15 @@ e identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 \tableofcontents
-                       [1] (main.toc
-(C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-1.def
-File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-))
+                       [1] (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
+ (introduction/introduction.tex [0
 
-(introduction/introduction.tex [0
-
-]) (I/chap1.texpdfTeX warning (ext4): destination with the same identifier (nam
-e{page.1}) has been already used, duplicate ignored
+])
+(I/chap1.texpdfTeX warning (ext4): destination with the same identifier (name{p
+age.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1 \chapter
@@ -998,6 +992,24 @@ l.1 \chapter
 ]
 Chapitre 1.
 
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\begingroup' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\<let>-command' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\utf@viii@undeferr' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\endgroup' on input line 1.
+
+(C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
+)
 Overfull \hbox (11.28014pt too wide) in paragraph at lines 4--5
 []\T1/cmr/m/n/10 Les tracés de l'ensemble des courbes a été obtenu par l'interp
 réteur en ligne \T1/cmr/m/it/10 http ://realtimeatwork.com/minplus-
@@ -1114,17 +1126,6 @@ See the caption package documentation for explanation.
 
 LaTeX Warning: Reference `fig:serviceA' on page 6 undefined on input line 24.
 
-
-Package caption Warning: \label without proper reference on input line 11.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:CA_1_2' on page 6 undefined on input line 26.
-
-File: ./II/images/alpha_5.png Graphic file (type png)
-<use ./II/images/alpha_5.png>
-Package pdftex.def Info: ./II/images/alpha_5.png  used on input line 31.
-(pdftex.def)             Requested size: 290.22107pt x 217.67365pt.
 ) (III/chap3.tex [6]
 Chapitre 3.
 ) (Conclusion/Conclusion.tex [7
@@ -1160,24 +1161,21 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 7358B679B8C092E0C7602A0344FCF7D4;1849
-(rerunfilecheck)             After:  31654D5FFA181376691FF60CBD630961;1793.
+(rerunfilecheck)             Before: 94618CBA5530A58C739F3D4E23D0B19F;1792
+(rerunfilecheck)             After:  A80A05DB82B285E741832F01A06B9025;1848.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 23467 strings out of 495229
- 417923 string characters out of 3181267
- 521685 words of memory out of 3000000
+ 23466 strings out of 495229
+ 417905 string characters out of 3181267
+ 521639 words of memory out of 3000000
  26238 multiletter control sequences out of 15000+200000
  20905 words of font info for 45 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
- 62i,13n,96p,507b,753s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,13n,96p,507b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
 ectt1000.pk> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\
 ec\dpi600\eccc1000.pk> <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour
@@ -1201,9 +1199,9 @@ ers/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 /cmmi7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfon
 ts/cm/cmr10.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/a
 msfonts/cm/cmr7.pfb>
-Output written on main.pdf (14 pages, 667389 bytes).
+Output written on main.pdf (14 pages, 665580 bytes).
 PDF statistics:
- 709 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
+ 702 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
  245 words of extra memory for PDF output out of 10000 (max. 10000000)
 
