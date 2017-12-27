@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  27 DEC 2017 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6500 64-bit) (preloaded format=pdflatex 2017.12.13)  27 DEC 2017 17:36
 entering extended mode
 **./main.tex
 (main.tex
@@ -810,6 +810,12 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box45
 \enitdp@description=\count166
 )
+(C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\stmaryrd.sty
+Package: stmaryrd 1994/03/03 St Mary's Road symbol package
+\symstmry=\mathgroup5
+LaTeX Font Info:    Overwriting symbol font `stmry' in version `bold'
+(Font)                  U/stmry/m/n --> U/stmry/b/n on input line 89.
+)
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
@@ -950,6 +956,9 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 33.
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+LaTeX Font Info:    Try loading font information for U+stmry on input line 33.
+
+(C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\stmaryrd\ustmry.fd)
 <./page_de_garde/schema.jpg, id=104, 308.83081pt x 81.0232pt>
 File: ./page_de_garde/schema.jpg Graphic file (type jpg)
 <use ./page_de_garde/schema.jpg>
@@ -1012,13 +1021,6 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 8.
 
-
-Package caption Warning: \label without proper reference on input line 11.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:CA_1_2' on page 2 undefined on input line 9.
-
 <./I/images/alpha_1_2.png, id=163, 601.0455pt x 452.28975pt>
 File: ./I/images/alpha_1_2.png Graphic file (type png)
 <use ./I/images/alpha_1_2.png>
@@ -1044,82 +1046,64 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 40.
 
-
-Package caption Warning: \label without proper reference on input line 50.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:serviceA' on page 3 undefined on input line 46.
-
 <./I/images/beta_A.png, id=179, 599.23875pt x 455.301pt>
 File: ./I/images/beta_A.png Graphic file (type png)
 <use ./I/images/beta_A.png>
 Package pdftex.def Info: ./I/images/beta_A.png  used on input line 52.
 (pdftex.def)             Requested size: 241.84843pt x 183.75673pt.
 [3 <./I/images/beta_A.png>]
-
-Package caption Warning: \label without proper reference on input line 69.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:arriveA' on page 4 undefined on input line 63.
-
 <./I/images/arrive_general.png, id=191, 601.0455pt x 457.71pt>
 File: ./I/images/arrive_general.png Graphic file (type png)
 <use ./I/images/arrive_general.png>
 Package pdftex.def Info: ./I/images/arrive_general.png  used on input line 71.
 (pdftex.def)             Requested size: 290.22107pt x 221.0113pt.
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 86.
-
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 86.
 
-) (II/chap2.tex [4 <./I/images/arrive_general.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 86.
+
+[4 <./I/images/arrive_general.png>]
+<./I/images/sortiesA.png, id=210, 605.8635pt x 454.69875pt>
+File: ./I/images/sortiesA.png Graphic file (type png)
+<use ./I/images/sortiesA.png>
+Package pdftex.def Info: ./I/images/sortiesA.png  used on input line 101.
+(pdftex.def)             Requested size: 290.22107pt x 217.81581pt.
+) (II/chap2.tex [5 <./I/images/sortiesA.png>]
 Chapitre 2.
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\ucs\uni-32.def
 File: uni-32.def 2013/05/13 UCS: Unicode data U+2000..U+20FF
 )
-
-Package caption Warning: \label without proper reference on input line 11.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:CA_1_2' on page 5 undefined on input line 9.
-
-
-Package caption Warning: \label without proper reference on input line 11.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:CA_1_2' on page 5 undefined on input line 11.
-
-<./II/images/alpha_5.png, id=210, 803.0pt x 602.25pt>
+<./II/images/alpha_5.png, id=223, 803.0pt x 602.25pt>
 File: ./II/images/alpha_5.png Graphic file (type png)
 <use ./II/images/alpha_5.png>
 Package pdftex.def Info: ./II/images/alpha_5.png  used on input line 18.
 (pdftex.def)             Requested size: 290.22107pt x 217.67365pt.
-[5
+ [6
 
  <./II/images/alpha_5.png>]
-
-Package caption Warning: \label without proper reference on input line 50.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:serviceA' on page 6 undefined on input line 24.
-
-) (III/chap3.tex [6]
+<./II/images/alphaP_C1.png, id=232, 803.0pt x 602.25pt>
+File: ./II/images/alphaP_C1.png Graphic file (type png)
+<use ./II/images/alphaP_C1.png>
+Package pdftex.def Info: ./II/images/alphaP_C1.png  used on input line 38.
+(pdftex.def)             Requested size: 232.17242pt x 174.1242pt.
+<./II/images/alphaP_C1-2.png, id=233, 803.0pt x 602.25pt>
+File: ./II/images/alphaP_C1-2.png Graphic file (type png)
+<use ./II/images/alphaP_C1-2.png>
+Package pdftex.def Info: ./II/images/alphaP_C1-2.png  used on input line 43.
+(pdftex.def)             Requested size: 232.17242pt x 174.1242pt.
+) (III/chap3.tex [7 <./II/images/alphaP_C1.png> <./II/images/alphaP_C1-2.png>]
 Chapitre 3.
-) (Conclusion/Conclusion.tex [7
+) (Conclusion/Conclusion.tex [8
 
 ]
 Chapitre 4.
-) (annexes/annexes.tex [8
+) (annexes/annexes.tex [9
 
-] [9
+] [10
 
 ] (annexes/annexe1/annexe1.tex
 
@@ -1129,9 +1113,9 @@ Package hyperref Warning: The anchor of a bookmark and its parent's must not
 (C:\Users\David\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 ))
-(annexes/annexe2/annexe2.tex [10
+(annexes/annexe2/annexe2.tex [11
 
-])) [11
+])) [12
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
@@ -1146,19 +1130,16 @@ Package rerunfilecheck Warning: File `main.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: A80A05DB82B285E741832F01A06B9025;1848
-(rerunfilecheck)             After:  94618CBA5530A58C739F3D4E23D0B19F;1792.
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Before: 751577979989C499A9A6300572C45456;1851
+(rerunfilecheck)             After:  063DFB54EFC66D82154F5AB4CC01DE6D;1795.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 23466 strings out of 495229
- 417905 string characters out of 3181267
- 521639 words of memory out of 3000000
- 26238 multiletter control sequences out of 15000+200000
- 20905 words of font info for 45 fonts, out of 3000000 for 9000
+ 23643 strings out of 495229
+ 420325 string characters out of 3181267
+ 523204 words of memory out of 3000000
+ 26397 multiletter control sequences out of 15000+200000
+ 21721 words of font info for 49 fonts, out of 3000000 for 9000
  0 hyphenation exceptions out of 8191
  62i,13n,96p,507b,753s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\David\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\
@@ -1181,12 +1162,15 @@ ocal\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\David
 ers/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 <C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm/cmmi1
 2.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfon
-ts/cm/cmr10.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/a
-msfonts/cm/cmr7.pfb>
-Output written on main.pdf (14 pages, 666346 bytes).
+/cmmi5.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/amsfon
+ts/cm/cmmi7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/a
+msfonts/cm/cmr10.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/type1
+/public/amsfonts/cm/cmsy7.pfb><C:/Users/David/AppData/Roaming/MiKTeX/2.9/fonts/
+type1/public/hoekwater/stmary10.pfb>
+Output written on main.pdf (15 pages, 822613 bytes).
 PDF statistics:
- 705 PDF objects out of 1000 (max. 8388607)
- 54 named destinations out of 1000 (max. 500000)
- 245 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 737 PDF objects out of 1000 (max. 8388607)
+ 59 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
