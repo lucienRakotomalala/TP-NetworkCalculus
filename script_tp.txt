@@ -72,6 +72,4 @@ Vdev5 := vDev(alpha3B,beta)
 alpha2PB :=// je sais pas  alpha2B / beta
 alpha1PB :=// ^^ alpha1B2 / beta  
 // Affichage  
-plot(alphaPC,beta,alphaC1,main="alpha'C1,beta,alphaC1",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
-
-  
+//plot(alphaPC,beta,alphaC,main="alpha'C1,beta,alphaC",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
