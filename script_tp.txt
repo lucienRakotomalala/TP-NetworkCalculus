@@ -1,70 +1,77 @@
-// Partie 1
+// BE Network calculus 
+// Lucien Rakotomalala & David Tocaven
+
+// ************** Partie 1 **************
+
+// Envoyer par mail le rapport M. Lauer et Mme. Le Corronc 22/12
+alpha1A := affine(83.5, 167) //echelle octets/ms
+alpha2A := affine(26.46, 847) //echelle octets/ms
+beta := affine(12500,0) * delay(0.016) // elle est de type latence tau. Vaut pour les noeuds A, B et C.
+alphaA:= alpha1A + alpha2A //  pour la quetion 3 
 //
-// Envoyer par mail le rapport M.Lauer et Mme. Le Corronc 22/12
-alpha1A1 := affine(83.5, 167) //echelle octets/ms
-alpha2A1 := affine(26.46, 847) //echelle octets/ms
-betaA := affine(12500,0) * delay(0.016) // elle est de type latence tau
-alphaA1:= alpha1A1 + alpha2A1 //  pour la quetion 3 
-//
-//
-plot(alpha1A1,alpha2A1,betaA,xlim = [0,0.05],ylim = [0,1000])
-plot(alphaA1,xlim = [0,0.05],ylim = [0,1000])
+// Affichages
+plot(alpha1A,alpha2A,beta,xlim = [0,0.05],ylim = [0,1000], main="alpha1A,alpha2A et betaA",xlab="miliseconde",ylab="octets")
+plot(alphaA,xlim = [0,0.05],ylim = [0,1000], main="alphaA",xlab="miliseconde",ylab="octets")
 //  
-HdevA1 := hDev(alpha1A1,betaA);
+HdevA1 := hDev(alpha1A,beta);
 HdevA1
-VdevA1 := vDev(alpha1A1,betaA)
+VdevA1 := vDev(alpha1A,beta)
 VdevA1
-HdevA2 := hDev(alpha2A1,betaA)
-VdevA2 := vDev(alpha2A1,betaA)	
+HdevA2 := hDev(alpha2A,beta)
+VdevA2 := vDev(alpha2A,beta)	
 
-alpha1B1 := alpha1A1 / delay(HdevA1)
-  
-alpha2B2 := alpha2A1 / delay(HdevA2)
-
-  
-plot(alpha1B1)
-plot(alpha2B1)
-
-  
-//Partie 2
-  
-
+alpha1B := alpha1A / delay(HdevA1)
+alpha1B  
+alpha2B := alpha2A / delay(HdevA2)
+alpha2B
+// affichages 
+plot(alpha1B, main="alpha1B",xlab="miliseconde",ylab="octets")
+plot(alpha2B, main="alpha2B",xlab="miliseconde",ylab="octets")
+//******************** Partie 2 ***********************
 //alpha B1 5
   
-alpha5B1 := affine(12.09, 1547)
-plot(alpha5B1,main="alpha5B1",xlab="miliseconde",ylab="octets")
+alpha3B := affine(12.09, 1547)
+plot(alpha3B,main="alpha3B",xlab="miliseconde",ylab="octets")
   
 //alpha C
 
 
-alpha3C1 := affine(60, 120) //echelle octets/ms
-alpha4C1 := affine(25, 800) //echelle octets/ms
-betaC := affine(12500,0) * delay(0.016) // elle est de type latence taux
-alphaC1:= alpha3C1 + alpha4C1 
+alpha1C := affine(60, 120) //echelle octets/ms
+alpha2C := affine(25, 800) //echelle octets/ms
+alphaC:= alpha1C + alpha2C
   
+alphaPC := alphaC/ beta
+  
+plot(alphaPC,beta,alphaC,main="alpha'C,betaC,alphaC",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
+
 //Reponse question II.2 1) Les courbes d'arriv?e sont de type sceau perc?
   
 //question II.2 2) Les courbes de services de B et de C sont identiques ? celle de A (type latence taux)
-plot(  
+
 
 //question II.2 3)
 
 //calcul deviations pour taux d'arrivee alpha C
  
-HdevC3 := hDev(alpha3C1,betaC)
-VdevC3 := vDev(alpha3C1,betaC)
+HdevC3 := hDev(alpha1C,beta)
+VdevC3 := vDev(alpha1C,beta)
   
-HdevC4 := hDev(alpha4C1,betaC)
-VdevC4 := vDev(alpha4C1,betaC)
+HdevC4 := hDev(alpha2C,beta)
+VdevC4 := vDev(alpha2C,beta)
 
-alpha3B1 := alpha3C1 / delay(HdevC3)
+alpha1PB1 := alpha1C / delay(HdevC3)
   
-alpha4B1 := alpha4C1 / delay(HdevC4)
+alpha1PB2 := alpha2C / delay(HdevC4)
   
 //calcul deviations pour taux d'arrivee alpha B1 5
 
-Hdev5 := hDev(alpha5B1,betaA)
-Vdev5 := vDev(alpha5B1,betaA)
-  
-alpha2B2 = alpha
+Hdev5 := hDev(alpha3B,beta)
+Vdev5 := vDev(alpha3B,beta)
 //
+// Calcule les Sorties de B
+alpha2PB :=// je sais pas  alpha2B / beta
+alpha1PB :=// ^^ alpha1B2 / beta  
+// Affichage  
+plot(alphaPC,beta,alphaC1,main="alpha'C1,beta,alphaC1",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
+
+  
