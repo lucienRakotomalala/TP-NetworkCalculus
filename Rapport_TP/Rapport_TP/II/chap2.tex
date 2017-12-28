@@ -1,4 +1,4 @@
-\chapter{Etude du réseau complet}
+\chapter{Étude du réseau complet}
 Dans ce chapitre, nous allons étendre l'étude précédente à l'ensemble du réseau.
 Nous allons commencer par une étude générale du réseau puis, nous étudierons les pire temps de traversé (WCTT) et les pires différences des volumes de données du réseau (backlog). Pour fini, nous verrons comment améliorer le WCTT et le backlog du réseaux.
 \section{Analyse générale du réseau}
@@ -19,7 +19,7 @@ Nous avons calculé les courbes d'arrivées des flux $v_3$, $v_4$ et $v_5$, c'es
 \caption{\label{fig:CA_5}Courbe d'arrivée $\alpha$ du flux $v_5$ (bleu)}
 \end{figure} 
 \subsection{Courbes de service de B et C}\label{sub:courbesServiceB-C}
-Nous allons voir ici, par la même méthode que celle utilisé dans le chapitre précédent, les courbes de services des deux sorties de B et la sortie de C. Voici, en commençant par la courbe de service du n\oe ud C :
+Nous allons voir ici, par la même méthode que celle utilisée dans le chapitre précédent, les courbes de service des deux sorties de B et la sortie de C. Voici, en commençant par la courbe de service du n\oe ud C :
 \begin{description}
 \item[$\beta^{C1}$] Qui est la même que $\beta^A$, dans le chapitre précédent, figure \ref{fig:serviceA}, page \pageref{fig:serviceA}. En effet les n\oe uds A et C ont les mêmes caractéristiques, la courbe de service est donc identique.
 \item[$\beta^{B1}$ et $\beta^{B2}$] Les courbes de services de B sont identiques à celle de C car les n\oe uds ont tous les mêmes propriétés. 
@@ -30,12 +30,12 @@ Nous allons voir ici, par la même méthode que celle utilisé dans le chapitre 
 % alpha'^A déja fait avant en flux séparés 
 % alpha'^C avec alpha^C = alpha_1^C + alpha_2^C et beta_C
 % alpha'^B1 avec alpha^C = alpha_1^C + alpha_2^C et beta_C
-Pour réaliser une étude entière du réseau, nous allons établir les courbes d'arrivées $\alpha'$ de tous les ports de sortie du réseau. Nous souhaitons dans un premier temps récapituler chaque sorties des blocs dans laquelle nous allons séparer chaque flux. Pour les sorties de $A$, nous avons déjà calculer les données maximales disponibles sur ces ports de sorties (\ref{sub:sortiesAs}) :
+Pour réaliser une étude entière du réseau, nous allons établir les courbes d'arrivées $\alpha'$ de tous les ports de sortie du réseau. Nous souhaitons dans un premier temps récapituler chaque sorties des blocs dans laquelle nous allons séparer chaque flux. Pour les sorties de $A$, nous avons déjà calculé les données maximales disponibles sur ces ports de sorties (\ref{sub:sortiesAs}) :
 \begin{itemize}
 \item $\alpha'^{A}_1 = \alpha^{A1}_1 \varoslash \beta$
 \item $\alpha'^{A}_2 = \alpha^{A1}_2 \varoslash \beta$
 \end{itemize}
-Pour le nœud $C$, nous pouvons identifier les mêmes fonctions que pour $A$ avec les courbes d'arrivées et de services établis respectivement en (\ref{sub:courbesArriveesB-C}) et (\ref{sub:courbesServiceB-C}) : 
+Pour le nœud $C$, nous pouvons identifier les mêmes fonctions que pour $A$ avec les courbes d'arrivées et de services établies respectivement en (\ref{sub:courbesArriveesB-C}) et (\ref{sub:courbesServiceB-C}) : 
 \begin{itemize}
 \item $\alpha'^{C}_1 = \alpha^{C1}_1 \varoslash \beta$
 \item $\alpha'^{C}_2 = \alpha^{C1}_2 \varoslash \beta$
@@ -154,15 +154,15 @@ Tous les temps de traversée sont supérieur à deux fois la latence technologiq
 
 Le pire temps de traversé est donc le maximum de ces valeurs et vaut $167,554 \text{ }\mu s$ et il correspond au temps de traversé d'un octet sur le \emph{virtual link} $v4$.
 \subsection{Pire backlog du réseau}
-Le pire backlog du réseau est le noeud pour lequel la somme des backlog est la plus grande.
-Nous avons calculer le backlog de chaque signaux et avons trouvé que c'était le noeud B qui présente le pire backlog : 
+Le pire backlog du réseau est le nœud pour lequel la somme des backlog est la plus grande.
+Nous avons calculé le backlog de chaque signaux et avons trouvé que c'était le nœud $B$ qui présente le pire backlog : 
 \begin{equation}
 \mu_B = \mu_{B11} + \mu_{B31} + \mu_{B41} + \mu_{B51} + \mu_{B22}  = 3582,2323 \text{ octets}
 \end{equation}
 \section{Amélioration du pire délai de traversée de bout-en bout}
 \subsection{Dépendance des flux et tracé des nouvelles courbes}
 Les flux sortant de C, $\alpha_1^{'C}$ et $\alpha_2^{'C}$ sortent tous deux dans la sortie 1 de B $\alpha_1^{'B}$. Ils peuvent donc être traité comme un seul flux et être sérialisé.
-Les courbes de services des n\oe uds ne varient pas. Les courbes d'arrivées et de sorties de A non plus.
+Les courbes de services des nœuds ne varient pas. Les courbes d'arrivées et de sorties de A non plus.
 Voici les nouvelles courbes pour B et C :
 \begin{figure}[!ht]%
 %  alpha2PB2

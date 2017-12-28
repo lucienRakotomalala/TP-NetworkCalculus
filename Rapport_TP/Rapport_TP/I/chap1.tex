@@ -55,7 +55,7 @@ betaA := affine(12500,0) * delay(0.016)
 
 Cette courbe est du type latence-taux, car notre modèle admet une latence technologique et dispose d'un débit de sortie. Pour résumé, le modèle du nœud $A$ reçoit des données dans une courbe d'arrivé de type seau percé pour les traiter avec une courbe de service du type latence-tau. Selon nos estimations, le nœud va donc lisser le débit des flux $v1$ et $v2$.
 
-\section{Courbe d'arrivé du nœud A}
+\section{Courbe d'arrivée du nœud A}
 Nous nous intéressons maintenant au cumul des flux dans l'entrée du nœud $A$. Pour cela, nous allons utiliser le résultat expliqué en pendant les travaux dirigés qui expriment : 
 \begin{equation}
 \alpha^A = \alpha_1^A + \alpha_2^A
@@ -83,7 +83,7 @@ Nous obtenons ainsi un délai et une quantité qui représentent les pire cas po
 \end{align}
 Nous ne connaissons pas les limites du système qui utilise ce réseau, nous ne pouvons donc pas établir de conclusions sur ces résultat. Nous pourrons les comparer une fois que les délai et backlog pire cas des autres nœud auront été calculé.
 
-\section{Courbes d'arrivé du port 1 et 2 de $B$}\label{sub:sortiesAs}
+\section{Courbes d'arrivée des ports 1 et 2 de $B$}\label{sub:sortiesAs}
 Avec la mise en tandem des flux $v1$ et $v2$, nous pouvons établir la courbe d'arrivé du bloc $B$ avec les courbes de sorties du bloc $A$. Nous disposons de l'équation qui permet de lié la courbe d'arrivé avec la courbe de sortie :
  \begin{equation}
 \alpha_i^{B_i} = \alpha'^{A_i} = \alpha^{A_i} \varoslash \tau_i

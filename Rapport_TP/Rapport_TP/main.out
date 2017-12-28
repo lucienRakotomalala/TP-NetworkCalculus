@@ -1,11 +1,11 @@
 \BOOKMARK [0][-]{chapter*.2}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.1}{\311tude du n[Please insert \134PrerenderUnicode\173œ\175 into preamble]ud A}{}% 2
+\BOOKMARK [0][-]{chapter.1}{\311tude du n\234ud A}{}% 2
 \BOOKMARK [1][-]{section.1.1}{Courbes d'arriv\351e }{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.2}{Courbe de service }{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.3}{Courbe d'arriv\351 du n\234ud A}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Courbe d'arriv\351e du n\234ud A}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.4}{D\351lai et backlog pire cas}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.5}{Courbes d'arriv\351 du port 1 et 2 de B}{chapter.1}% 7
-\BOOKMARK [0][-]{chapter.2}{Etude du r\351seau complet}{}% 8
+\BOOKMARK [1][-]{section.1.5}{Courbes d'arriv\351e des ports 1 et 2 de B}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{\311tude du r\351seau complet}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Analyse g\351n\351rale du r\351seau}{chapter.2}% 9
 \BOOKMARK [2][-]{subsection.2.1.1}{Courbes d\220arriv\351es de B et C}{section.2.1}% 10
 \BOOKMARK [2][-]{subsection.2.1.2}{Courbes de service de B et C}{section.2.1}% 11
@@ -16,9 +16,11 @@
 \BOOKMARK [1][-]{section.2.3}{Am\351lioration du pire d\351lai de travers\351e de bout-en bout}{chapter.2}% 16
 \BOOKMARK [2][-]{subsection.2.3.1}{D\351pendance des flux et trac\351 des nouvelles courbes}{section.2.3}% 17
 \BOOKMARK [2][-]{subsection.2.3.2}{Re-calcul des d\351lais pire cas et conclusion}{section.2.3}% 18
-\BOOKMARK [0][-]{chapter.3}{}{}% 19
-\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 20
-\BOOKMARK [-1][-]{part*.12}{Annexes}{}% 21
-\BOOKMARK [0][-]{chapter*.13}{TITRE}{part*.12}% 22
-\BOOKMARK [1][-]{section*.14}{TITRE}{chapter*.13}% 23
-\BOOKMARK [0][-]{chapter*.15}{Annexe 2 - TITRE}{part*.12}% 24
+\BOOKMARK [0][-]{chapter.3}{Modifications de quelques caract\351ristiques du r\351seau}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Cons\351quences de la modification}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.2}{Nouvelle analyse du r\351seau complet et conclusion}{chapter.3}% 21
+\BOOKMARK [-1][-]{part*.13}{Annexes}{}% 22
+\BOOKMARK [0][-]{chapter*.14}{Tableau de donn\351es}{part*.13}% 23
+\BOOKMARK [1][-]{section*.15}{TITRE}{chapter*.14}% 24
+\BOOKMARK [0][-]{chapter*.16}{Tableau de donn\351es modifi\351}{part*.13}% 25
+\BOOKMARK [1][-]{section*.17}{TITRE}{chapter*.16}% 26
