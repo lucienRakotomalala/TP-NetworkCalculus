@@ -11,15 +11,15 @@
 \contentsline {subsection}{\numberline {2.1.1}Courbes d\IeC {\textquoteright }arriv\IeC {\'e}es de B et C}{6}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Courbes de service de B et C}{7}{subsection.2.1.2}
 \contentsline {subsection}{\numberline {2.1.3}\IeC {\'E}tude de l'ensemble du r\IeC {\'e}seau}{7}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Borne sur les pires temps de travers\IeC {\'e}e et sur le pire backlog}{7}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Pire d\IeC {\'e}lai de travers\IeC {\'e}e de bout-en bout}{7}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Pire backlog du r\IeC {\'e}seau}{7}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Am\IeC {\'e}lioration du pire d\IeC {\'e}lai de travers\IeC {\'e}e de bout-en bout}{7}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}D\IeC {\'e}pendance des flux et trac\IeC {\'e} des nouvelles courbes}{7}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Re-calcul des d\IeC {\'e}lais pire cas et conclusion}{7}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}}{8}{chapter.3}
-\contentsline {chapter}{\numberline {4}Conclusion}{9}{chapter.4}
-\contentsline {part}{Annexes}{11}{part*.9}
-\contentsline {chapter}{TITRE}{11}{chapter*.10}
-\contentsline {section}{TITRE}{11}{section*.11}
-\contentsline {chapter}{Annexe 2 - TITRE}{12}{chapter*.12}
+\contentsline {section}{\numberline {2.2}Borne sur les pires temps de travers\IeC {\'e}e et sur le pire backlog}{9}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Pire d\IeC {\'e}lai de travers\IeC {\'e}e de bout-en bout}{9}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Pire backlog du r\IeC {\'e}seau}{9}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}Am\IeC {\'e}lioration du pire d\IeC {\'e}lai de travers\IeC {\'e}e de bout-en bout}{9}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}D\IeC {\'e}pendance des flux et trac\IeC {\'e} des nouvelles courbes}{9}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Re-calcul des d\IeC {\'e}lais pire cas et conclusion}{9}{subsection.2.3.2}
+\contentsline {chapter}{\numberline {3}}{10}{chapter.3}
+\contentsline {chapter}{\numberline {4}Conclusion}{11}{chapter.4}
+\contentsline {part}{Annexes}{13}{part*.10}
+\contentsline {chapter}{TITRE}{13}{chapter*.11}
+\contentsline {section}{TITRE}{13}{section*.12}
+\contentsline {chapter}{Annexe 2 - TITRE}{14}{chapter*.13}
