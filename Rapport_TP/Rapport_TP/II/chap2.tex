@@ -54,7 +54,6 @@ Enfin, pour le nœud $B$, nous allons réutiliser les valeurs des ports de sorti
 
 
 Figures \ref{fig:alpha1PB1}, \ref{fig:alpha3PB1}, \ref{fig:alpha4PB1} et \ref{fig:alpha5PB1} sont tracées les courbes de sortie de la première sortie de B. \\
-
 Figure \ref{fig:alpha2PB2}, est tracé la courbe de sortie de la seconde sortie de B.
 
 \begin{figure}[!ht]%
@@ -69,7 +68,8 @@ Figure \ref{fig:alpha2PB2}, est tracé la courbe de sortie de la seconde sortie 
 \noindent\includegraphics[width = \textwidth]{./II/images/alpha3PB1.png}%
 \caption{\label{fig:alpha3PB1}Courbe de sortie $\alpha_3 ^{'B1}$ (bleu), $\alpha_1^{'C}$ (vert) et la courbe de service $\beta_B$ (rouge) de B.}%
 \end{minipage}\vspace{5mm}\newline 
-%
+\end{figure}
+\begin{figure}[!ht]
 % alpha4PB1 et alpha5PB1
 \begin{minipage}{.48\textwidth}%
 \centering%
@@ -102,10 +102,51 @@ Nous avons ensuite calculé les délais pire-cas
 
 \section{Borne sur les pires temps de traversée et sur le pire backlog}
 
-\subsection{Pire délai de traversée de bout-en bout}
+\subsection{Pire délai de traversée de bout-en-bout}
+Le pire délai de traversée de bout-en-bout est la somme pour chaque flux de tous les pires temps de traversé du port initial à la sortie.
+Nous avons donc pour chaque \emph{virtual link} $v_i, i \in \left\lbrace 1,2,3,4,5\right\rbrace$, calculé le pire temps de traversée $WCTT_i$ :
+\begin{equation}
+\begin{array}{lclcll}
+WCTT_1	&=&	\tau_{A1} + \tau_{B11} 	&=& 58,8269&\mu s\\
+WCTT_2	&=&	\tau_{A2} + \tau_{B22} 	&=& 167,5539&\mu s\\
+WCTT_3	&=&	\tau_{C1} + \tau_{B31} 	&=& 58,8269	&\mu s\\
+WCTT_4	&=&	\tau_{C2} + \tau_{B41} 	&=& 167,554	&\mu s\\
+WCTT_5	&=&	\tau_{B51} 				&=& 139,76	&\mu s\\
+\end{array}
+\end{equation}
+Tous les temps de traversée sont supérieur à deux fois la latence technologique, qui, pour $v_1, v_2, v_3$ et $v_4$ est le temps minimal de transit technologique.\\
 
+Le pire temps de traversé est donc le maximum de ces valeurs et vaut $167,554 \text{ }\mu s$ et il correspond au temps de traversé d'un octet sur le \emph{virtual link} $v4$.
 \subsection{Pire backlog du réseau}
-
+Le pire backlog du réseau est le noeud pour lequel la somme des backlog est la plus grande.
+Nous avons calculer le backlog de chaque signaux et avons trouvé que c'était le noeud B qui présente le pire backlog : 
+\begin{equation}
+\mu_B = \mu_{B11} + \mu_{B31} + \mu_{B41} + \mu_{B51} + \mu_{B22}  = 3582,2323 \text{ octets}
+\end{equation}
 \section{Amélioration du pire délai de traversée de bout-en bout}
 \subsection{Dépendance des flux et tracé des nouvelles courbes}
+Les flux sortant de C, $\alpha_1^{'C}$ et $\alpha_2^{'C}$ sortent tous deux dans la sortie 1 de B $\alpha_1^{'B}$. Ils peuvent donc être traité comme un seul flux et être sérialisé.
+Les courbes de services des n\oe uds ne varient pas. Les courbes d'arrivées et de sorties de A non plus.
+Voici les nouvelles courbes pour B et C :
+\begin{figure}[!ht]%
+%  alpha2PB2
+\centering%
+\noindent\includegraphics[width = .6\textwidth]{./II/images/alphaSerialise.png}%
+\caption{\label{fig:alphaSerialise}Courbe de sortie $\alpha_3,4^{'B1}$ (rouge), $\alpha^{'C}$ (bleu) et la courbe de service $\beta_B$ (vert) de C.}%
+\end{figure}
+
 \subsection{Re-calcul des délais pire cas et conclusion}
+Ce changement d'approche a modifié certains temps de transferts de bout-en-bout. 
+\begin{equation}
+\begin{array}{lclcll}
+WCTT_1	&=&	\tau_{A1} + \tau_{B11} 	&=& 58,8269&\mu s\\
+WCTT_2	&=&	\tau_{A2} + \tau_{B22} 	&=& 167,5539&\mu s\\
+WCTT_3	&=&	\tau_{C} + \tau_{B(3,4)1} 	&=& 113,12&\mu s\\
+WCTT_4	&=&	\tau_{C} + \tau_{B(3,4)1} &=& 113,12	&\mu s\\
+WCTT_5	&=&	\tau_{B51} 				&=& 139,76	&\mu s\\
+\end{array}
+\end{equation}
+Le pire backlog est toujours sur le n\oe ud B, avec une valeur $2595,0403$ octets.
+On remarque que la sérialisation permet un gain de 38\% sur le backlog.
+
+% conclusion
