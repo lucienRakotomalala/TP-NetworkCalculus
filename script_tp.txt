@@ -108,7 +108,7 @@ tauB51 :=  hDev(alpha5B,beta)
   tauB51
 tauB22 :=  hDev(alpha2PA,beta)
   tauB22
-
+//backlog
 muC1 := vDev(alpha1C,beta)
   muC1
 muC2 := vDev(alpha2C,beta)
@@ -123,3 +123,26 @@ muB51 :=  vDev(alpha5B,beta)
   muB51
 muB22 :=  vDev(alpha2PA,beta)
   muB22
+  
+// Flux s?rialis?s
+lambda := affine(12500,0)
+  alphaC = alpha1C + alpha2C
+alphaPCs := alphaC /\ lambda
+  // sortie 1 de B
+alpha34PB1s := alphaPCs / beta // / delay(HdevC4)
+
+  // Affichage 
+plot(alpha34PB1s,beta,alphaPCs,main="alpha3,4'B serialise ,betaC,alpha'C serialise",xlab="miliseconde",ylab="octets",xlim=[-0.001,.2],ylim=[-10, 1000])
+
+
+// D?lai pire-cas     
+tauCs := hDev(alphaC,beta)
+  tauCs
+  
+tauB34s :=  hDev(alphaPCs,beta)
+  tauB34s
+//backlog
+muCs := vDev(alphaC,beta)
+  muCs
+muB34s :=  vDev(alphaPCs,beta)
+  muB34s
