@@ -2,9 +2,14 @@
 Dans cette partie, nous allons nous consacrer à une dernière étude dans laquelle le \emph{BAG} de $v4$ va être modifié. Nous allons dans un premier temps analyser l'impact de cettemodification sur le flux $v4$ et sur les ports d'entrée et de sortie de ce flux. Puis nous recalculerons le nouveau WCTT pour mesurer l'impact de cette modification.
 
 \section{Conséquences de la modification}
-Les courbes de services ne seront pas affectés par cette modification du \emph{BAG} de $v4$. Nous pouvons observer avec le nouveau $BAG_4 = 16ms$. Les pentes des courbes de données maximales d'arrivées dans les nœud dépendent de ce $BAG$, plus celui ci diminue, plus la courbe est penché donc les données maximales possibles dans un VL augmentent avec le temps. Cela revient donc  dire que le \emph{Virtuel Link} sera plus encombré par l'entrée qui lui est lié, $e4$.
-
+Les courbes de services ne seront pas affectés par cette modification du \emph{BAG} de $v4$. Nous pouvons observer avec le nouveau $BAG_4 = 16ms$. Les pentes des courbes de données maximales d'arrivées dans les nœud dépendent de ce $BAG$, plus celui ci diminue, plus la courbe est penché donc les données maximales possibles dans un VL augmentent avec le temps. Cela revient donc  dire que le \emph{Virtuel Link} sera plus encombré par l'entrée qui lui est lié, $e4$. La nouvelle pente de la courbe d'arrivée est :
+\begin{equation}
+a_4 = \frac{847}{16} = 52.937
+\end{equation}
 La courbe d'arrivé dans le nœud $B$ du \emph{Virtual link} sera toujours lié avec $v3$ comme nous l'avons vu auparavant, et nous pourrons observé une pente plus importante comme dans la courbe d'arrivé dans $C$. 
 
 En conclusion, la diminution du $BAG_4$ va entrainer une augmentation del'utilisation du \emph{Virtual Link 4}. Nous devon analyser le délai pire cas et le backlog pire cas pour connaitre les influences de cette modification.
+
 \section{Nouvelle analyse du réseau complet et conclusion} 
+
+
