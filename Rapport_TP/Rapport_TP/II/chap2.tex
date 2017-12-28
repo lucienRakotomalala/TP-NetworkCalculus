@@ -3,7 +3,7 @@ Dans ce chapitre, nous allons étendre l'étude précédente à l'ensemble du r�
 Nous allons commencer par une étude générale du réseau puis, nous étudierons les pire temps de traversé (WCTT) et les pires différences des volumes de données du réseau (backlog). Pour fini, nous verrons comment améliorer le WCTT et le backlog du réseaux.
 \section{Analyse générale du réseau}
 Dans un premier temps, nous allons calculer les courbes d'arrivées de B et C, puis les courbes de service des ports de sorties de B et C.
-\subsection{Courbes d’arrivées de B et C}
+\subsection{Courbes d’arrivées de B et C}\label{sub:courbesArriveesB-C}
 Nous avons calculé les courbes d'arrivées des flux $v_3$, $v_4$ et $v_5$, c'est-à-dire le volume de données qui arrive par intervalle de temps dans les entrées du bloc C et par la troisième entrée du bloc B. Respectivement : 
 \begin{description}
 \item[$\alpha_3^{C1}$ ] Qui est la même que $\alpha_1^{A1}$, dans le chapitre précédent, figure \ref{fig:CA_1_2}, page \pageref{fig:CA_1_2}. En effet $v_1$ et $v_3$ ont les mêmes caractéristiques (BAG et $s_{max}$). Elle est de type sceau percé.
@@ -18,7 +18,7 @@ Nous avons calculé les courbes d'arrivées des flux $v_3$, $v_4$ et $v_5$, c'es
 \includegraphics[width = .6\textwidth]{./II/images/alpha_5.png}
 \caption{\label{fig:CA_5}Courbe d'arrivée $\alpha$ du flux $v_5$ (bleu)}
 \end{figure} 
-\subsection{Courbes de service de B et C}
+\subsection{Courbes de service de B et C}\label{sub:courbesServiceB-C}
 Nous allons voir ici, par la même méthode que celle utilisé dans le chapitre précédent, les courbes de services des deux sorties de B et la sortie de C. Voici, en commençant par la courbe de service du n\oe ud C :
 \begin{description}
 \item[$\beta^{C1}$] Qui est la même que $\beta^A$, dans le chapitre précédent, figure \ref{fig:serviceA}, page \pageref{fig:serviceA}. En effet les n\oe uds A et C ont les mêmes caractéristiques, la courbe de service est donc identique.
@@ -30,7 +30,28 @@ Nous allons voir ici, par la même méthode que celle utilisé dans le chapitre 
 % alpha'^A déja fait avant en flux séparés 
 % alpha'^C avec alpha^C = alpha_1^C + alpha_2^C et beta_C
 % alpha'^B1 avec alpha^C = alpha_1^C + alpha_2^C et beta_C
-Pour réaliser les courbes d'arrivées de tous les flux de sortie du réseau, nous avons décidé de calculer $\alpha'^C$ en considérant $\alpha^C = \alpha_1^C + \alpha_2^C$. Pour le calcul de $\alpha'^{B1}$ et $\alpha'^{B2}$, nous avons décidé de faire un calcul avec les flux séparés.
+Pour réaliser une étude entière du réseau, nous allons établir les courbes d'arrivées $\alpha'$ de tous les ports de sortie du réseau. Nous souhaitons dans un premier temps récapituler chaque sorties des blocs dans laquelle nous allons séparer chaque flux. Pour les sorties de $A$, nous avons déjà calculer les données maximales disponibles sur ces ports de sorties (\ref{sub:sortiesAs}) :
+\begin{itemize}
+\item $\alpha'^{A}_1 = \alpha^{A1}_1 \varoslash \beta$
+\item $\alpha'^{A}_2 = \alpha^{A1}_2 \varoslash \beta$
+\end{itemize}
+Pour le nœud $C$, nous pouvons identifier les mêmes fonctions que pour $A$ avec les courbes d'arrivées et de services établis respectivement en (\ref{sub:courbesArriveesB-C}) et (\ref{sub:courbesServiceB-C}) : 
+\begin{itemize}
+\item $\alpha'^{C}_1 = \alpha^{C1}_1 \varoslash \beta$
+\item $\alpha'^{C}_2 = \alpha^{C1}_2 \varoslash \beta$
+\end{itemize}
+Enfin, pour le nœud $B$, nous allons réutiliser les valeurs des ports de sortie de $A$ et $C$ ainsi que la valeur du port 3 de $B$ de  pour établir les données maximales susceptibles de parvenir sur les ports de sorties de $B$. Pour le port 1 de B : \begin{itemize}
+\item $\alpha'^{B1}_1 = \alpha'^{A}_1 \varoslash \beta$
+\item $\alpha'^{B1}_2 = \emptyset$
+\item $\alpha'^{B1}_3 = \alpha'^{C}_1 \varoslash \beta$
+\item $\alpha'^{B1}_4 = \alpha'^{C}_2 \varoslash \beta$
+\item $\alpha'^{B1}_5 = \alpha'^{B1}_5 \varoslash \beta$
+ \end{itemize}
+ Et pour le port 2, nous obtenons : \begin{itemize}
+\item $\alpha'^{B2}_1 = \alpha'^{B2}_3 = \alpha'^{B2}_4 = \alpha'^{B2}_5 = \emptyset$
+\item $\alpha'^{B2}_2 = \alpha'^{A}_2 \varoslash \beta$
+ \end{itemize}
+ Nous avons décidé de calculer $\alpha'^C$ en considérant $\alpha^C = \alpha_1^C + \alpha_2^C$. Pour le calcul de $\alpha'^{B1}$ et $\alpha'^{B2}$, nous avons décidé de faire un calcul avec les flux séparés.
 Voici la courbe d'arrivée de $\alpha'^C = \alpha^C \varoslash \beta_C$ : 
 \begin{figure}[!ht]%
 \begin{minipage}{.48\textwidth}%
