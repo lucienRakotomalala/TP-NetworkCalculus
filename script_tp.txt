@@ -13,21 +13,27 @@ alphaA:= alpha1A + alpha2A //  pour la quetion 3
 plot(alpha1A,alpha2A,beta,xlim = [0,0.05],ylim = [0,1000], main="alpha1A,alpha2A et betaA",xlab="miliseconde",ylab="octets")
 plot(alphaA,xlim = [0,0.05],ylim = [0,1000], main="alphaA",xlab="miliseconde",ylab="octets")
 //  
-HdevA1 := hDev(alpha1A,beta);
-HdevA1
-VdevA1 := vDev(alpha1A,beta)
-VdevA1
-HdevA2 := hDev(alpha2A,beta)
-VdevA2 := vDev(alpha2A,beta)	
-
-alpha1B := alpha1A / delay(HdevA1)
-alpha1B  
-alpha2B := alpha2A / delay(HdevA2)
-alpha2B
+tauA1 := hDev(alpha1A,beta);
+tauA1
+muA1 := vDev(alpha1A,beta)
+muA1
+  
+tauA2 := hDev(alpha2A,beta)
+tauA2
+muA2 := vDev(alpha2A,beta)	
+muA2
+alpha1PA := alpha1A/beta
+alpha2PA := alpha2A/beta
+  
+//alpha1B := alpha1A / delay(HdevA1)
+//alpha1B  
+//alpha2B := alpha2A / delay(HdevA2)
+//alpha2B
 // affichages 
 plot(alpha1B, main="alpha1B",xlab="miliseconde",ylab="octets")
 plot(alpha2B, main="alpha2B",xlab="miliseconde",ylab="octets")
 //******************** Partie 2 ***********************
+  
 //alpha B1 5
   
 alpha3B := affine(12.09, 1547)
@@ -36,14 +42,17 @@ plot(alpha3B,main="alpha3B",xlab="miliseconde",ylab="octets")
 //alpha C
 
 
-alpha1C := affine(60, 120) //echelle octets/ms
-alpha2C := affine(25, 800) //echelle octets/ms
+alpha1C := affine(83.5, 167) //echelle octets/ms
+alpha2C := affine(26.5, 847) //echelle octets/ms
 alphaC:= alpha1C + alpha2C
   
 alphaPC := alphaC/ beta
   
-plot(alphaPC,beta,alphaC,main="alpha'C,betaC,alphaC",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
-
+alpha1PC := alpha1C/beta
+alpha2PC := alpha2C/beta
+  
+plot(alpha1PC,beta,alpha1C,main="alpha1'C,betaC,alpha1C",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 200])
+plot(alpha2PC,beta,alpha2C,main="alpha2'C,betaC,alpha2C",xlab="miliseconde",ylab="octets",xlim=[-0.01,.1],ylim=[-100, 1000])
 //Reponse question II.2 1) Les courbes d'arriv?e sont de type sceau perc?
   
 //question II.2 2) Les courbes de services de B et de C sont identiques ? celle de A (type latence taux)
@@ -59,17 +68,58 @@ VdevC3 := vDev(alpha1C,beta)
 HdevC4 := hDev(alpha2C,beta)
 VdevC4 := vDev(alpha2C,beta)
 
-alpha1PB1 := alpha1C / delay(HdevC3)
+alpha5B := affine(12.1,1547) 
   
-alpha1PB2 := alpha2C / delay(HdevC4)
-  
-//calcul deviations pour taux d'arrivee alpha B1 5
+  // sortie 1 de B
+alpha1PB1 := alpha1PA / beta // / delay(HdevC3)
+alpha3PB1 := alpha1PC / beta // / delay(HdevC4)
+alpha4PB1 := alpha2PC / beta
+alpha5PB1 := alpha5B  / beta
+  // Sortie 2 de 
+alpha2PB2 := alpha2PA / beta
+
+  // Affichage 
+plot(alpha1PB1,beta,alpha1PA,main="alpha1'B1,betaC,alpha1PA",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 200])
+plot(alpha3PB1,beta,alpha1PC,main="alpha3'B1,betaC,alpha1PC",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 200])
+
+plot(alpha4PB1,beta,alpha2PC,main="alpha4'B1,betaC,alpha2PC",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 900])
+
+plot(alpha5PB1,beta,alpha5B,main="alpha5'B1,betaC,alpha5B",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 1600])
+
+plot(alpha2PB2,beta,alpha2PA,main="alpha2'B2,betaC,alpha2PA",xlab="miliseconde",ylab="octets",xlim=[-0.001,.032],ylim=[-10, 900])
+
+// Calcul deviations pour taux d'arrivee alpha B1 5
 
 Hdev5 := hDev(alpha3B,beta)
 Vdev5 := vDev(alpha3B,beta)
-//
-// Calcule les Sorties de B
-alpha2PB :=// je sais pas  alpha2B / beta
-alpha1PB :=// ^^ alpha1B2 / beta  
-// Affichage  
-//plot(alphaPC,beta,alphaC,main="alpha'C1,beta,alphaC",xlab="miliseconde",ylab="octets",xlim=[0,.1],ylim=[0, 1000])
+  
+// D?lai pire-cas     
+tauC1 := hDev(alpha1C,beta)
+  tauC1
+tauC2 := hDev(alpha2C,beta)
+  tauC2
+tauB11 :=  hDev(alpha1PA,beta)
+  tauB11
+tauB31 :=  hDev(alpha1PC,beta)
+  tauB31
+tauB41 :=  hDev(alpha2PC,beta)
+  tauB41
+tauB51 :=  hDev(alpha5B,beta)
+  tauB51
+tauB22 :=  hDev(alpha2PA,beta)
+  tauB22
+
+muC1 := vDev(alpha1C,beta)
+  muC1
+muC2 := vDev(alpha2C,beta)
+  muC2
+muB11 :=  vDev(alpha1PA,beta)
+  muB11
+muB31 :=  vDev(alpha1PC,beta)
+  muB31
+muB41 :=  vDev(alpha2PC,beta)
+  muB41
+muB51 :=  vDev(alpha5B,beta)
+  muB51
+muB22 :=  vDev(alpha2PA,beta)
+  muB22
