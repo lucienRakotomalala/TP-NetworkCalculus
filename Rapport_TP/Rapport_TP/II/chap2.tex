@@ -52,10 +52,11 @@ Enfin, pour le nœud $B$, nous allons réutiliser les valeurs des ports de sorti
 \item $\alpha'^{B2}_2 = \alpha'^{A}_2 \varoslash \beta$
  \end{itemize}
 
+Nous avons noté ici les courbes de service avec $\beta$ car nous avons déterminé qu'elles étaient toutes identiques.
 
-Figures \ref{fig:alpha1PB1}, \ref{fig:alpha3PB1}, \ref{fig:alpha4PB1} et \ref{fig:alpha5PB1} sont tracées les courbes de sortie de la première sortie de B. \\
+Sur les figures \ref{fig:alpha1PB1}, \ref{fig:alpha3PB1}, \ref{fig:alpha4PB1} et \ref{fig:alpha5PB1} sont tracées les courbes de sortie de la première sortie de B. \\
 
-Figure \ref{fig:alpha2PB2}, est tracé la courbe de sortie de la seconde sortie de B.
+La figure \ref{fig:alpha2PB2} contient le tracé la courbe de sortie de la seconde sortie de B.
 
 \begin{figure}[!ht]%
 % alpha1PB1 et alpha3PB1
@@ -91,8 +92,42 @@ Figure \ref{fig:alpha2PB2}, est tracé la courbe de sortie de la seconde sortie 
 \end{figure}
 %2)) Calculer le délai pire-cas tau_A1 et le backlog pire-cas mu_A1 du port de sortie de A à partir de alpha^A1 et de beta^A.
 \newpage 
-Nous avons ensuite calculé les délais pire-cas 
+Nous avons ensuite calculé les délais pire-cas ($\tau$) ainsi que les backlogs($\mu$) pire cas de chaque flux pour chaque nœuds qu'ils traversent. Nous obtenons les valeurs suivantes. Le calcul a été effectué à partir de la même méthode evoqué dans la partie \ref{eqn:delai-backlog}.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Virtual Link& $\tau$(ms)& $\mu$(octets)\\
+\hline
+$\alpha^{C1} $   & $0.029$& $168.3$\\
+$\alpha^{C2} $ 	 & $0.084$& $847.4$\\
+$\alpha^{B1}_1 $ & $0.029$& $169.6$\\
+$\alpha^{B1}_3 $ & $0.029$& $169.6$\\
+$\alpha^{B1}_4 $ & $0.084$& $847.4$\\
+$\alpha^{B1}_5 $ & $0.139$& $157.2$\\
+$\alpha^{B2}_2 $ & $0.084$& $847.4$\\
+\hline
+\end{tabular}
+\end{center}
+Maintenant, nous allons effectuer la même étude mais cette fois ci en sérialisant les \emph{Virtual Links} qui peuvent être sérialisé. Nous observons que $v3$ et $v4$ sont tous les deux liés par $C$ et ne sont plus séparés ensuite. Nous pouvons donc réécrire la sortie de C comme étant :
+\begin{align*}
+&\alpha'^C_s = (\alpha^C_1 + \alpha^C_2) \land \lambda\\ 
+&\alpha'^{B1}_{34s} = \alpha'^C_s \varoslash \beta 
+\end{align*} où $\lambda$ est le débit des ports de sortie, i.e la pente de la courbe de service. Nous obtenons alors une estimation maximale des données sur le port de sortie de $C$ qui change les délais et backlog pire cas des sorties de $B$ et $C$ en :
 
+\begin{align*}
+\alpha'^C \text{ qui découle de } \alpha'^{C}_1 \text{ et } \alpha'^C_2
+			& \text{: Délai pire cas   : }\tau = 	0.097 \text{ ms}\\
+			& \text{  Backlog pire cas : }\mu = 1015.76\text{ octets}\\
+\alpha'^B_{34} \text{ qui découle de } \alpha'^{B1}_3 \text{ et } \alpha'^{B1}_4
+			& \text{: Délai pire cas   : }\tau = 	0.016 \text{ ms}\\
+			& \text{  Backlog pire cas : }\mu = 200\text{ octets}\\
+\end{align*}
+
+\begin{figure}[!ht]
+\centering%
+\noindent\includegraphics[width = .5\textwidth]{./II/images/alpha_34s.png}%
+\caption{\label{fig:alphaPB34}Courbe de sortie $\alpha_{34s}^{'B1}$ (rouge), $\alpha^{'C}_s$ (vert) et la courbe de service $\beta_B$ (vert)}
+\end{figure}
 %3)) Calculer alpha_1^B1 et alpha_2^B2 les courbes d’arrivée des ports de sortie 1 et 2 de B par flux.
 
 %4)) Calculer alpha^B1 et alpha^B2 les courbes d’arrivée des ports de sortie de B en prenant en compte les flux de manière séparée.
